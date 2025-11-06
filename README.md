@@ -1,7 +1,7 @@
 # MySQL 8.0 CE Notes
 
 **Table of Contents:**  
-\- [SELECT Statement]  
+\- SELECT Statement  
 \- [WHERE Clause](#bookmark=id.sseoia2rra4a)  
 \- [LIKE Operator](#bookmark=id.xvhqovbf1s2j)  
 \- [ORDER BY Clause](#bookmark=id.736f6vha7uop)  
