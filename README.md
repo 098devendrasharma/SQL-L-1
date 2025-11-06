@@ -20,7 +20,7 @@
 
 ## SELECT Statement
 
-**Definition:** The SELECT statement is the fundamental query used to retrieve data from a database. It specifies the columns to return and the table from which to fetch them. In MySQL, the SELECT statement “is used to select data from a database” and returns the results as a result-set[\[1\]](https://www.w3schools.com/mysql/mysql_select.asp#:~:text=The%20,select%20data%20from%20a%20database).
+**Definition:** The SELECT statement is the fundamental query used to retrieve data from a database. It specifies the columns to return and the table from which to fetch them. In MySQL, the SELECT statement “is used to select data from a database” and returns the results as a result-set.
 
 **Syntax:**
 
@@ -47,7 +47,7 @@ FROM actor;
 | 3 | ED | CHASE |
 | ... more rows ... |  |  |
 
-**Explanation:** This query selects the actor\_id, first\_name, and last\_name from the actor table. The actor table’s rows are returned exactly as stored, in no particular order by default. You can use SELECT \* to get all columns. Each returned row appears once in the result-set, as defined by the columns in the SELECT clause[\[1\]](https://www.w3schools.com/mysql/mysql_select.asp#:~:text=The%20,select%20data%20from%20a%20database).
+**Explanation:** This query selects the actor\_id, first\_name, and last\_name from the actor table. The actor table’s rows are returned exactly as stored, in no particular order by default. You can use SELECT \* to get all columns. Each returned row appears once in the result-set, as defined by the columns in the SELECT clause.
 
 **Practice Question:** Write a query to retrieve the first and last names of all employees from an employees table.
 
@@ -66,7 +66,7 @@ FROM actor;
 
 ## WHERE Clause
 
-**Definition:** The WHERE clause filters rows returned by a SELECT (or UPDATE/DELETE) to include only those that meet a specified condition. The WHERE clause “is used to filter records. It is used to extract only those records that fulfill a specified condition”[\[2\]](https://www.w3schools.com/sql/sql_where.asp#:~:text=The%20,to%20filter%20records).
+**Definition:** The WHERE clause filters rows returned by a SELECT (or UPDATE/DELETE) to include only those that meet a specified condition. The WHERE clause “is used to filter records. It is used to extract only those records that fulfill a specified condition”.
 
 **Syntax:**
 
@@ -89,7 +89,7 @@ WHERE last\_name \= 'WAHLBERG';
 | 2 | NICK | WAHLBERG |
 | 5 | JULIA | WAHLBERG |
 
-**Explanation:** This query selects the actor ID, first name, and last name from actor, but only for rows where the last\_name equals 'WAHLBERG'. The WHERE clause filters out any rows that do not meet this condition[\[2\]](https://www.w3schools.com/sql/sql_where.asp#:~:text=The%20,to%20filter%20records). Without WHERE, all rows would be returned.
+**Explanation:** This query selects the actor ID, first name, and last name from actor, but only for rows where the last\_name equals 'WAHLBERG'. The WHERE clause filters out any rows that do not meet this condition. Without WHERE, all rows would be returned.
 
 **Practice Question:** From a table customers with columns (customer\_id, name, age, city), find all customers older than 30\.
 
@@ -109,7 +109,7 @@ WHERE last\_name \= 'WAHLBERG';
 
 ## LIKE Operator
 
-**Definition:** The LIKE operator, used within a WHERE clause, performs pattern matching on string data. It allows searching for a specified pattern with wildcards. W3Schools notes that “the LIKE operator is used in a WHERE clause to search for a specified pattern in a column”[\[3\]](https://www.w3schools.com/mysql/mysql_like.asp#:~:text=The%20MySQL%20LIKE%20Operator). % matches zero or more characters, and \_ matches exactly one character.
+**Definition:** The LIKE operator, used within a WHERE clause, performs pattern matching on string data. It allows searching for a specified pattern with wildcards. W3Schools notes that “the LIKE operator is used in a WHERE clause to search for a specified pattern in a column”. % matches zero or more characters, and \_ matches exactly one character.
 
 **Syntax:**
 
@@ -135,7 +135,7 @@ WHERE first\_name LIKE 'P%';
 | PENELOPE |
 | PRESTON |
 
-**Explanation:** The pattern 'P%' means any string starting with 'P'. The query returns first names beginning with 'P' by matching the first\_name column against the pattern[\[4\]](https://www.w3schools.com/mysql/mysql_like.asp#:~:text=The%20,specified%20pattern%20in%20a%20column). You can use % at the beginning, end, or both to match substrings, and \_ to match a single character.
+**Explanation:** The pattern 'P%' means any string starting with 'P'. The query returns first names beginning with 'P' by matching the first\_name column against the pattern. You can use % at the beginning, end, or both to match substrings, and \_ to match a single character.
 
 **Practice Question:** In a products table (product\_id, product\_name), find products whose names end with “Pro”.
 
@@ -155,7 +155,7 @@ WHERE first\_name LIKE 'P%';
 
 ## ORDER BY Clause
 
-**Definition:** The ORDER BY clause sorts the result set by one or more columns. By default, it sorts in ascending order. W3Schools states: “The ORDER BY keyword is used to sort the result-set in ascending or descending order”[\[5\]](https://www.w3schools.com/sql/sql_orderby.asp#:~:text=The%20SQL%20ORDER%20BY).
+**Definition:** The ORDER BY clause sorts the result set by one or more columns. By default, it sorts in ascending order. W3Schools states: “The ORDER BY keyword is used to sort the result-set in ascending or descending order”.
 
 **Syntax:**
 
@@ -182,7 +182,7 @@ ORDER BY last\_name ASC;
 | 5 | JULIA | WAHLBERG |
 | ... more rows ... | ... | ... |
 
-**Explanation:** This query selects from actor and orders the result by last\_name in ascending order[\[5\]](https://www.w3schools.com/sql/sql_orderby.asp#:~:text=The%20SQL%20ORDER%20BY). If two actors share the same last name, their relative order is arbitrary unless a second column is specified. To reverse the order, one would add DESC after the column name.
+**Explanation:** This query selects from actor and orders the result by last\_name in ascending order. If two actors share the same last name, their relative order is arbitrary unless a second column is specified. To reverse the order, one would add DESC after the column name.
 
 **Practice Question:** List all customers from a customers table sorted by city in descending order.
 
@@ -202,7 +202,7 @@ ORDER BY last\_name ASC;
 
 ## Aggregate Functions
 
-**Definition:** Aggregate functions compute a single result from multiple rows. Common ones include COUNT, AVG, SUM, MIN, and MAX. These functions summarize or aggregate data over rows. For example, COUNT() returns the number of matching rows, AVG() computes the average, and SUM() adds values[\[6\]](https://www.w3schools.com/mysql/mysql_count_avg_sum.asp#:~:text=The%20,that%20matches%20a%20specified%20criterion). Likewise, MIN() and MAX() return the smallest and largest values in a column[\[7\]](https://www.w3schools.com/sql/sql_min_max.asp#:~:text=The%20SQL%20MIN,Functions). Aggregate functions often accompany a GROUP BY clause, though basic uses do not require it.
+**Definition:** Aggregate functions compute a single result from multiple rows. Common ones include COUNT, AVG, SUM, MIN, and MAX. These functions summarize or aggregate data over rows. For example, COUNT() returns the number of matching rows, AVG() computes the average, and SUM() adds values. Likewise, MIN() and MAX() return the smallest and largest values in a column. Aggregate functions often accompany a GROUP BY clause, though basic uses do not require it.
 
 **Syntax:**
 
@@ -234,7 +234,7 @@ WHERE department \= 'Sales';
 \- COUNT(actor\_id) counts the number of rows where actor\_id is not NULL.  
 \- AVG(age) calculates the average of the age column.  
 \- SUM(salary) adds up all salary values for Sales employees.  
-Each aggregate returns one value summarizing the matching rows[\[6\]](https://www.w3schools.com/mysql/mysql_count_avg_sum.asp#:~:text=The%20,that%20matches%20a%20specified%20criterion)[\[7\]](https://www.w3schools.com/sql/sql_min_max.asp#:~:text=The%20SQL%20MIN,Functions). Note that WHERE filters rows before aggregation.
+Each aggregate returns one value summarizing the matching rows. Note that WHERE filters rows before aggregation.
 
 **Practice Question:** Given a table orders(order\_id, amount, order\_date), find the total number of orders and average order amount for all orders in 2025\.
 
@@ -468,7 +468,7 @@ INNER JOIN product AS p
 
 ## Subqueries
 
-**Definition:** A subquery (or nested query) is a query within another query. The inner query executes first, and its result is used by the outer query. Subqueries can appear in SELECT, FROM, WHERE, and other clauses. They are often used to filter results based on aggregated or conditional logic from another query[\[8\]](https://www.geeksforgeeks.org/sql/nested-queries-in-sql/#:~:text=A%20nested%20query%20,easier%20to%20read%20and%20maintain).
+**Definition:** A subquery (or nested query) is a query within another query. The inner query executes first, and its result is used by the outer query. Subqueries can appear in SELECT, FROM, WHERE, and other clauses. They are often used to filter results based on aggregated or conditional logic from another query
 
 **Syntax:**
 
@@ -494,7 +494,7 @@ WHERE country \= (
 
 SELECT country FROM customers WHERE first\_name \= 'David';
 
-finds David’s country. The outer query then retrieves all customers with that country. The inner query runs first and returns a value used by the outer WHERE clause[\[8\]](https://www.geeksforgeeks.org/sql/nested-queries-in-sql/#:~:text=A%20nested%20query%20,easier%20to%20read%20and%20maintain). If the inner query returns multiple rows, you can use operators like IN, ANY, or ALL (e.g. country IN (subquery)).
+finds David’s country. The outer query then retrieves all customers with that country. The inner query runs first and returns a value used by the outer WHERE clause. If the inner query returns multiple rows, you can use operators like IN, ANY, or ALL (e.g. country IN (subquery)).
 
 **Practice Question:** In a table salaries(emp\_id, salary), find employees whose salary is above the average salary.
 
@@ -514,7 +514,7 @@ finds David’s country. The outer query then retrieves all customers with that 
 
 ## Normalization
 
-**Definition:** **Database normalization** is the design principle of organizing data to minimize redundancy and improve data integrity. It typically involves dividing data into multiple related tables and defining relationships between them. As freeCodeCamp describes: normalization “entails organizing a database into several tables in order to reduce redundancy” and helps avoid duplicates and maintain integrity[\[9\]](https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/#:~:text=Database%20normalization%20is%20a%20database,an%20organized%20and%20consistent%20way).
+**Definition:** **Database normalization** is the design principle of organizing data to minimize redundancy and improve data integrity. It typically involves dividing data into multiple related tables and defining relationships between them. As freeCodeCamp describes: normalization “entails organizing a database into several tables in order to reduce redundancy” and helps avoid duplicates and maintain integrity.
 
 * **1NF (First Normal Form):** Each table cell must hold atomic (indivisible) values, and each record must be unique. No repeating groups or multiple values in a single field.
 
@@ -530,8 +530,8 @@ finds David’s country. The outer query then retrieves all customers with that 
 
 ## Constraints
 
-**Definition:** Constraints enforce rules on data in a table to maintain accuracy and integrity. Common constraints include: \- PRIMARY KEY: A combination of NOT NULL and UNIQUE that uniquely identifies each row[\[10\]](https://www.w3schools.com/mysql/mysql_constraints.asp#:~:text=%2A%20%60PRIMARY%20KEY%20%60%20,would%20destroy%20links%20between%20tables).  
-\- FOREIGN KEY: Ensures that a column (or set of columns) matches a primary (or unique) key in another table. It “prevents actions that would destroy links between tables”[\[10\]](https://www.w3schools.com/mysql/mysql_constraints.asp#:~:text=%2A%20%60PRIMARY%20KEY%20%60%20,would%20destroy%20links%20between%20tables), maintaining referential integrity.  
+**Definition:** Constraints enforce rules on data in a table to maintain accuracy and integrity. Common constraints include: \- PRIMARY KEY: A combination of NOT NULL and UNIQUE that uniquely identifies each row.  
+\- FOREIGN KEY: Ensures that a column (or set of columns) matches a primary (or unique) key in another table. It “prevents actions that would destroy links between tables”, maintaining referential integrity.  
 \- UNIQUE: Ensures all values in a column are distinct.  
 \- NOT NULL: Ensures a column cannot have NULL (empty) values.  
 \- CHECK: Enforces that values in a column satisfy a specific condition (e.g. CHECK (age \>= 0\)).  
@@ -565,7 +565,7 @@ CREATE TABLE employees (
 
 ## DDL (Data Definition Language)
 
-**Definition:** DDL commands define or modify the database schema and structure. They include **CREATE**, **ALTER**, **DROP**, **TRUNCATE**, **COMMENT**, and **RENAME** operations for databases, tables, columns, indexes, etc. DDL commands deal with descriptions of the database schema and are used to create or modify database objects[\[11\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=DDL%C2%A0,database%20objects%20in%20the%20database).
+**Definition:** DDL commands define or modify the database schema and structure. They include **CREATE**, **ALTER**, **DROP**, **TRUNCATE**, **COMMENT**, and **RENAME** operations for databases, tables, columns, indexes, etc. DDL commands deal with descriptions of the database schema and are used to create or modify database objects.
 
 **Common Commands:**  
 \- CREATE DATABASE dbname; – creates a new database.  
@@ -599,7 +599,7 @@ CREATE TABLE products (
 
 ## DML (Data Manipulation Language)
 
-**Definition:** DML commands manipulate the data within existing tables. They include **INSERT**, **UPDATE**, **DELETE**, and also **SELECT** (sometimes classified as DQL, but it retrieves data). DML is used to query and modify the data stored in tables[\[12\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=3.%20DML%20,Language).
+**Definition:** DML commands manipulate the data within existing tables. They include **INSERT**, **UPDATE**, **DELETE**, and also **SELECT** (sometimes classified as DQL, but it retrieves data). DML is used to query and modify the data stored in tables.
 
 **Common Commands:**  
 \- INSERT INTO table (columns) VALUES (...) – adds new rows.  
@@ -641,15 +641,15 @@ After the SELECT, one would see:
 
 ## Data Types
 
-**Definition:** MySQL data types specify the kind of data a column can hold. There are three main categories: **string (text)**, **numeric**, and **date/time** types[\[13\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=In%20MySQL%20there%20are%20three,numeric%2C%20and%20date%20and%20time). Within these:
+**Definition:** MySQL data types specify the kind of data a column can hold. There are three main categories: **string (text)**, **numeric**, and **date/time** types. Within these:
 
-* **String types:** CHAR, VARCHAR, TEXT, BLOB, ENUM, SET, etc. For example, VARCHAR(50) holds variable-length text up to 50 characters[\[14\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Data%20type%20Description%20CHAR,Default%20is%201).
+* **String types:** CHAR, VARCHAR, TEXT, BLOB, ENUM, SET, etc. For example, VARCHAR(50) holds variable-length text up to 50 characters.
 
 * **Numeric types:** TINYINT, INT, BIGINT, DECIMAL, FLOAT, etc. For example, INT for whole numbers and DECIMAL(10,2) for fixed-point precision.
 
-* **Date/time types:** DATE, DATETIME, TIMESTAMP, TIME, YEAR, etc. For example, DATE stores a date in YYYY-MM-DD format and DATETIME stores full date and time[\[15\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Date%20and%20Time%20Data%20Types).
+* **Date/time types:** DATE, DATETIME, TIMESTAMP, TIME, YEAR, etc. For example, DATE stores a date in YYYY-MM-DD format and DATETIME stores full date and time.
 
-Each type has specific range and storage requirements. For example, INT is a 4-byte integer, CHAR(n) is a fixed-length text of n characters, and DATE ranges from year 1000 to 9999[\[16\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Data%20type%20Description%20DATE%20A,DD%20hh%3Amm%3Ass). Choosing appropriate types is crucial for efficiency and correctness.
+Each type has specific range and storage requirements. For example, INT is a 4-byte integer, CHAR(n) is a fixed-length text of n characters, and DATE ranges from year 1000 to 9999. Choosing appropriate types is crucial for efficiency and correctness.
 
 **Example:**
 
@@ -672,7 +672,7 @@ This defines id as an integer, name as text up to 100 chars, price as a decimal 
 
 ## Window Functions
 
-**Definition:** Window (analytic) functions perform calculations across a set of rows that are related to the current row, without collapsing them. They use the OVER() clause to define a window (range/partition) of rows. As explained by MySQL docs, a window function computes an aggregate for each row while still returning each row[\[17\]](https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/#:~:text=Similar%20to%20grouped%20aggregate%20functions%2C,each%20row%20retain%20its%20identity). For example, ROW\_NUMBER(), RANK(), DENSE\_RANK(), LAG(), LEAD(), and aggregate functions can all be used as window functions.
+**Definition:** Window (analytic) functions perform calculations across a set of rows that are related to the current row, without collapsing them. They use the OVER() clause to define a window (range/partition) of rows. As explained by MySQL docs, a window function computes an aggregate for each row while still returning each row. For example, ROW\_NUMBER(), RANK(), DENSE\_RANK(), LAG(), LEAD(), and aggregate functions can all be used as window functions.
 
 **Syntax Example:**
 
@@ -703,7 +703,7 @@ FROM employees;
 | 7 | 98000 | 3 |
 | ... | ... | ... |
 
-**Explanation:** The RANK() OVER (PARTITION BY dept\_id ORDER BY salary DESC) calculates the rank of each employee’s salary within their department. Every row is returned along with its computed rank. The window (partition by department) defines which rows are compared for each result row. Window functions let each row “see” other rows in its partition. In contrast to GROUP BY aggregates, window functions do not reduce the number of rows[\[17\]](https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/#:~:text=Similar%20to%20grouped%20aggregate%20functions%2C,each%20row%20retain%20its%20identity); they only add calculated columns.
+**Explanation:** The RANK() OVER (PARTITION BY dept\_id ORDER BY salary DESC) calculates the rank of each employee’s salary within their department. Every row is returned along with its computed rank. The window (partition by department) defines which rows are compared for each result row. Window functions let each row “see” other rows in its partition. In contrast to GROUP BY aggregates, window functions do not reduce the number of rows; they only add calculated columns.
 
 **Practice Question:** In a table sales(emp\_id, sale\_amount), produce each emp\_id, sale\_amount, and the cumulative sum of sale\_amount ordered by sale\_amount descending.
 
@@ -724,54 +724,3 @@ FROM employees;
 | 7 | 1000 | 9000 |
 | ... | ... | ... |
 
-**Sources:** Authoritative SQL tutorials and MySQL documentation were used for definitions and syntax[\[1\]](https://www.w3schools.com/mysql/mysql_select.asp#:~:text=The%20,select%20data%20from%20a%20database)[\[2\]](https://www.w3schools.com/sql/sql_where.asp#:~:text=The%20,to%20filter%20records)[\[3\]](https://www.w3schools.com/mysql/mysql_like.asp#:~:text=The%20MySQL%20LIKE%20Operator)[\[5\]](https://www.w3schools.com/sql/sql_orderby.asp#:~:text=The%20SQL%20ORDER%20BY)[\[6\]](https://www.w3schools.com/mysql/mysql_count_avg_sum.asp#:~:text=The%20,that%20matches%20a%20specified%20criterion)[\[7\]](https://www.w3schools.com/sql/sql_min_max.asp#:~:text=The%20SQL%20MIN,Functions)[\[9\]](https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/#:~:text=Database%20normalization%20is%20a%20database,an%20organized%20and%20consistent%20way)[\[10\]](https://www.w3schools.com/mysql/mysql_constraints.asp#:~:text=%2A%20%60PRIMARY%20KEY%20%60%20,would%20destroy%20links%20between%20tables)[\[11\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=DDL%C2%A0,database%20objects%20in%20the%20database)[\[12\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=3.%20DML%20,Language)[\[13\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=In%20MySQL%20there%20are%20three,numeric%2C%20and%20date%20and%20time)[\[17\]](https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/#:~:text=Similar%20to%20grouped%20aggregate%20functions%2C,each%20row%20retain%20its%20identity).
-
----
-
-[\[1\]](https://www.w3schools.com/mysql/mysql_select.asp#:~:text=The%20,select%20data%20from%20a%20database) MySQL SELECT Statement
-
-[https://www.w3schools.com/mysql/mysql\_select.asp](https://www.w3schools.com/mysql/mysql_select.asp)
-
-[\[2\]](https://www.w3schools.com/sql/sql_where.asp#:~:text=The%20,to%20filter%20records) SQL WHERE Clause
-
-[https://www.w3schools.com/sql/sql\_where.asp](https://www.w3schools.com/sql/sql_where.asp)
-
-[\[3\]](https://www.w3schools.com/mysql/mysql_like.asp#:~:text=The%20MySQL%20LIKE%20Operator) [\[4\]](https://www.w3schools.com/mysql/mysql_like.asp#:~:text=The%20,specified%20pattern%20in%20a%20column) MySQL LIKE Operator
-
-[https://www.w3schools.com/mysql/mysql\_like.asp](https://www.w3schools.com/mysql/mysql_like.asp)
-
-[\[5\]](https://www.w3schools.com/sql/sql_orderby.asp#:~:text=The%20SQL%20ORDER%20BY) SQL ORDER BY Keyword
-
-[https://www.w3schools.com/sql/sql\_orderby.asp](https://www.w3schools.com/sql/sql_orderby.asp)
-
-[\[6\]](https://www.w3schools.com/mysql/mysql_count_avg_sum.asp#:~:text=The%20,that%20matches%20a%20specified%20criterion) MySQL COUNT(), AVG() and SUM() Functions
-
-[https://www.w3schools.com/mysql/mysql\_count\_avg\_sum.asp](https://www.w3schools.com/mysql/mysql_count_avg_sum.asp)
-
-[\[7\]](https://www.w3schools.com/sql/sql_min_max.asp#:~:text=The%20SQL%20MIN,Functions) SQL MIN() and MAX() Functions
-
-[https://www.w3schools.com/sql/sql\_min\_max.asp](https://www.w3schools.com/sql/sql_min_max.asp)
-
-[\[8\]](https://www.geeksforgeeks.org/sql/nested-queries-in-sql/#:~:text=A%20nested%20query%20,easier%20to%20read%20and%20maintain) SQL Nested Queries \- GeeksforGeeks
-
-[https://www.geeksforgeeks.org/sql/nested-queries-in-sql/](https://www.geeksforgeeks.org/sql/nested-queries-in-sql/)
-
-[\[9\]](https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/#:~:text=Database%20normalization%20is%20a%20database,an%20organized%20and%20consistent%20way) Database Normalization – Normal Forms 1nf 2nf 3nf Table Examples
-
-[https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/](https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/)
-
-[\[10\]](https://www.w3schools.com/mysql/mysql_constraints.asp#:~:text=%2A%20%60PRIMARY%20KEY%20%60%20,would%20destroy%20links%20between%20tables) MySQL Constraints
-
-[https://www.w3schools.com/mysql/mysql\_constraints.asp](https://www.w3schools.com/mysql/mysql_constraints.asp)
-
-[\[11\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=DDL%C2%A0,database%20objects%20in%20the%20database) [\[12\]](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/#:~:text=3.%20DML%20,Language) SQL Commands | DDL, DQL, DML, DCL and TCL Commands \- GeeksforGeeks
-
-[https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/](https://www.geeksforgeeks.org/sql/sql-ddl-dql-dml-dcl-tcl-commands/)
-
-[\[13\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=In%20MySQL%20there%20are%20three,numeric%2C%20and%20date%20and%20time) [\[14\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Data%20type%20Description%20CHAR,Default%20is%201) [\[15\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Date%20and%20Time%20Data%20Types) [\[16\]](https://www.w3schools.com/mysql/mysql_datatypes.asp#:~:text=Data%20type%20Description%20DATE%20A,DD%20hh%3Amm%3Ass) MySQL Data Types
-
-[https://www.w3schools.com/mysql/mysql\_datatypes.asp](https://www.w3schools.com/mysql/mysql_datatypes.asp)
-
-[\[17\]](https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/#:~:text=Similar%20to%20grouped%20aggregate%20functions%2C,each%20row%20retain%20its%20identity) MySQL :: MySQL 8.0.2: Introducing Window Functions
-
-[https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/](https://dev.mysql.com/blog-archive/mysql-8-0-2-introducing-window-functions/)
